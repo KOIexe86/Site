@@ -6,7 +6,7 @@
     <title>KOIexe</title>
 
 </head>
-<body>
+<body id="home">
     <header>
         <nav>
             <div class="title">
@@ -35,14 +35,14 @@
         </div>
     </div>
 
+    <div class="Bandeau">
+        <h2 class="subTitle">À propos de moi</h2>            
+    </div>
     <div class="About" id="a-propos">
-        <div class="Bandeau">
-            <h2 class="subTitle">À propos de moi</h2>            
-        </div>
 
         <div class="About-Text-Box">
             <h2>Age: <span>17 ans</span></h2>
-            <h2>Localisation: <span>France</span></h2>
+            <h2>Localisation: <span>Nouvelle-Aquitaine</span></h2>
             <h2>Passions: <span>Informatique, programmation, jeux vidéo</span></h2>
             <h2>Formation actuel: <span>Bac pro CIEL</span></h2>
 
@@ -57,21 +57,40 @@
         </div>
     </div>
 
+    <div class="Bandeau">
+        <h2 class="subTitle">Mes projets</h2>            
+    </div>  
     <div class="Projets" id="projets">
-        <div class="Bandeau">
-            <h2 class="subTitle">Mes projets</h2>            
+
+        <ul class="Cards">
+            <button class="Card-Btn" id="prev"><</button>
+
+            <li class="Slide active">
+                <h2>Biscotte</h2>
+                <img src="img_biscotte.png">
+            </li>
+        
+            <li class="Slide">
+                <h2>Homelab</h2>
+                <img src="img_homelab.png">
+            </li>
+
+            <li class="Slide">
+                <h2>Site web</h2>
+                <img src="img_siteWeb.png">
+
+            </li>
+
+            <button class="Card-Btn" id="next">></button>
+        </ul>
+
+        <div class="Description-Box">
+            <p class="Description active">/!\ PLACEHOLDER /!\ Un assistant vocal personnalisé développé en Python, capable de répondre à des commandes vocales, d'effectuer des tâches automatisées et de fournir des informations en temps réel.</p>
+            <p class="Description">/!\ PLACEHOLDER /!\ Un homelab personnel configuré pour l'apprentissage et l'expérimentation avec diverses technologies, y compris la virtualisation, les conteneurs et les services réseau.</p>
+            <p class="Description">/!\ PLACEHOLDER /!\ Un site web personnel conçu pour présenter mes compétences, mes projets et mon parcours dans le domaine de l'informatique et de la programmation.</p>
         </div>
-        <div class="Projets-Text-Box">
-            <h2>Assistant vocal en Python</h2>
-            <p>Un assistant vocal personnalisé développé en Python, capable de répondre à des commandes vocales, d'effectuer des tâches automatisées et de fournir des informations en temps réel.</p>
-
-            <h2>Homelab</h2>
-            <p>Un homelab personnel configuré pour l'apprentissage et l'expérimentation avec diverses technologies, y compris la virtualisation, les conteneurs et les services réseau.</p>
-
-            <h2>Ce site web</h2>
-            <p>Un site web personnel conçu pour présenter mes compétences, mes projets et mon parcours dans le domaine de l'informatique et de la programmation.</p>
-        </div>
-
+    </div>
+      
     <script src="script.js"></script>
 </body>
 </html>
