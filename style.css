@@ -1,0 +1,209 @@
+/*  Font: IBM Plex Mono
+    Source: Google font (https://fonts.google.com/specimen/IBM+Plex+Mono) */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+/*  Font: Ndot 57 Aligned
+    Source: Online Web Fonts (https://www.onlinewebfonts.com/download/d7a74ed36ff0603a3e41b6da32c47f03) */
+@import url('https://db.onlinewebfonts.com/c/d7a74ed36ff0603a3e41b6da32c47f03?family=Ndot+57+Aligned');
+
+/*  Pack Icon: Flaticon Brands
+    Source: Flaticon (https://www.flaticon.com/uicons/interface-icons) */
+@import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css');
+
+
+body {
+  background-color: #0C0C0C;
+  font-family: 'IbM Plex Mono', monospace;
+  font-weight: 400;
+}
+
+h1 {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-weight: normal;
+  font-size: 2.5rem;
+  font-family: 'Ndot 57 Aligned';
+  color: #CCCCCC;
+}
+
+h2, h3, h4, h5 {
+  font-weight: 700;
+  color: #CCCCCC;
+}
+
+p {
+  color: #CCCCCC;
+}
+
+a {
+  color: #CCCCCC;
+  text-decoration: none;
+}
+
+.subTitle {
+  font-family: 'Ndot 57 Aligned';
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  font-weight: normal;
+  color: #CCCCCC;
+}
+
+header {
+  background-color: #0C0C0C;
+  border-bottom: #CCCCCC 1px solid;
+  display: flex;
+  padding: 5px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  justify-content: space-between;
+  padding-right: 20px;
+  align-items: center;
+  flex-direction: row;
+  display: flex;
+  width: 100%;
+}
+
+nav .title {
+  align-items: center;
+  display: flex;
+  gap: 10px;
+  margin-left: 20px;
+  font-size: 2rem;
+}
+
+nav .title h1 {
+  font-size: 2.3rem;
+}
+
+nav .nav-text {
+  display: flex;
+  gap: 30px;
+  margin-right: 25px;
+}
+
+.Presentation {
+  padding: 250px 20px 250px 160px;
+  position: relative;
+  z-index: 0;
+}
+
+.Presentation::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  /* Créer un motif de grille avec des lignes espacées de 3.5em */
+  background-image: linear-gradient(#242424 .1em, transparent .1em), linear-gradient(90deg, #242424 .1em, transparent .1em);
+  background-size: 3.5em 3.5em;
+
+  /* Mette un masque pour faire disparaitre le motif sur les cotées de la section */
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 30%, rgba(0,0,0,1) 70%, rgba(0,0,0,0) 100%);
+}
+
+.Presentation p {
+  font-size: 1rem;
+  line-height: 0.1rem;
+  margin-top: 3px;
+}
+
+.Presentation-Text-Box {
+  background-color: rgba(204, 204, 204, 0.075);
+  backdrop-filter: blur(8px);
+  padding: 20px 40px 20px 20px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  max-width: fit-content;
+  z-index: 1;
+}
+
+.Presentation button {
+  padding: 7.5px 15px;
+  background-color: #242424;
+  color: #CCCCCC;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 0.9rem;
+}
+
+.Presentation button:hover {
+  background-color: #333333;
+}
+
+.Presentation button i {
+  margin-right: 8px;
+}
+
+.Pseudo {
+  font-family: 'Ndot 57 Aligned';
+  font-size: 4rem;
+  font-weight: 500;
+  display: inline-block;
+  background: linear-gradient(to right, #aa0200 15%, #773938);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Bandeau {
+  background-color: #242424;
+  padding: 20px 0px 20px 60px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-width: 2px 0px;
+
+}
+
+.About-Text-Box {
+  font-size: larger;
+  max-width: fit-content;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 200px 0px 200px 0px;
+  align-items: center;
+  position: relative;
+  z-index: 0;
+}
+
+/* Fait un fond de point, mais marche pas donc à voir 
+https://codepen.io/edmundojr/pen/xOYJGw
+*/
+.About-Text-Box::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+
+  background:
+		linear-gradient(90deg, var(#0C0C0C) calc(var(22px) - var(1px)), transparent 1%) center / var(22px) var(22px),
+		linear-gradient(var(#0C0C0C) calc(var(22px) - var(1px)), transparent 1%) center / var(22px) var(22px),
+		var(#CCCCCC);
+}
+
+.About-Text-Box h2 {
+  margin-bottom: 1px;
+  margin-top: 1px;
+  font-family: 'Ndot 57 Aligned';
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #aa0200;
+}
+.About-Text-Box h2 span {
+  color: #CCCCCC;
+}
+
+.About-Text-Box p {
+  margin-top: 10px;
+  line-height: 1.5rem;
+  text-align: right;
+}
+
+.About-Text-Box .separator {
+  height: 2px;
+  width: 60%;
+  margin: 20px auto;
+  background-color: #242424;
+}
