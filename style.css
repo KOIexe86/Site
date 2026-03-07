@@ -11,6 +11,10 @@
 @import url('https://cdn-uicons.flaticon.com/3.0.0/uicons-brands/css/uicons-brands.css');
 
 
+/* ---------------------------------------------------------------
+                             Général
+--------------------------------------------------------------- */
+
 body {
   background-color: #0C0C0C;
   font-family: 'IbM Plex Mono', monospace;
@@ -27,8 +31,9 @@ h1 {
 }
 
 h2, h3, h4, h5 {
-  font-weight: 700;
+  font-weight: 400;
   color: #CCCCCC;
+  font-family: "Ndot 57 Aligned";
 }
 
 p {
@@ -47,6 +52,17 @@ a {
   font-weight: normal;
   color: #CCCCCC;
 }
+
+.Bandeau {
+  background-color: #242424;
+  padding: 20px 0px 20px 60px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-width: 2px 0px;
+}
+
+/* ---------------------------------------------------------------
+                             Header
+--------------------------------------------------------------- */
 
 header {
   background-color: #0C0C0C;
@@ -84,10 +100,17 @@ nav .nav-text {
   margin-right: 25px;
 }
 
+/* ---------------------------------------------------------------
+                        Section présentation
+--------------------------------------------------------------- */
+
 .Presentation {
-  padding: 250px 20px 250px 160px;
+  padding: 0px 160px 0px 160px;
   position: relative;
   z-index: 0;
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
 }
 
 .Presentation::before {
@@ -111,13 +134,15 @@ nav .nav-text {
 }
 
 .Presentation-Text-Box {
-  background-color: rgba(204, 204, 204, 0.075);
-  backdrop-filter: blur(8px);
   padding: 20px 40px 20px 20px;
+  background-color: rgba(204, 204, 204, 0.021);
+  backdrop-filter: blur(8px);
   border-radius: 20px;
   border: 1px solid rgba(255, 255, 255, 0.06);
   max-width: fit-content;
+  max-height: fit-content;
   z-index: 1;
+  margin: auto 0px auto 0px;
 }
 
 .Presentation button {
@@ -138,7 +163,7 @@ nav .nav-text {
   margin-right: 8px;
 }
 
-.Pseudo {
+.Presentation .Pseudo {
   font-family: 'Ndot 57 Aligned';
   font-size: 4rem;
   font-weight: 500;
@@ -149,38 +174,68 @@ nav .nav-text {
   -webkit-text-fill-color: transparent;
 }
 
-.Bandeau {
-  background-color: #242424;
-  padding: 20px 0px 20px 60px;
-  border: 2px solid rgba(255, 255, 255, 0.06);
-  border-width: 2px 0px;
+.Presentation .voiture {
+  cursor: pointer;
+  z-index: 1;
+  padding: 35px 35px 15px 35px;
+  background-color: rgba(204, 204, 204, 0.021);
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  margin: 175px 0px 175px 0px;
+}
 
+.voiture .voiture-Text {
+  flex-direction: row;
+  display: flex;
+  justify-content: space-between;
+}
+
+.voiture .voiture-Text span {
+  height: fit-content;
+  width: fit-content;
+  font-weight: 400;
+  font-size: 2.0rem;
+  font-family: "Ndot 57 Aligned";
+
+  background: linear-gradient(to right, #aa0200 15%, #773938);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.voiture .voiture-Text .nithawi {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 1.25rem;
+}
+
+/* ---------------------------------------------------------------
+                        Section About
+--------------------------------------------------------------- */
+
+.About {
+  background-image: url("about_background.png");
+  background-size: cover;
+  background-position: center;
+  /* Mette un masque pour faire disparaitre le motif sur les cotées de la section */
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
+
+  padding: 200px 0px 200px 0px;
+  display: flex;
+  justify-content: center;
 }
 
 .About-Text-Box {
+  padding: 25px;
   font-size: larger;
   max-width: fit-content;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 200px 0px 200px 0px;
-  align-items: center;
   position: relative;
   z-index: 0;
-}
 
-/* Fait un fond de point, mais marche pas donc à voir 
-https://codepen.io/edmundojr/pen/xOYJGw
-*/
-.About-Text-Box::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  z-index: 0;
-
-  background:
-		linear-gradient(90deg, var(#0C0C0C) calc(var(22px) - var(1px)), transparent 1%) center / var(22px) var(22px),
-		linear-gradient(var(#0C0C0C) calc(var(22px) - var(1px)), transparent 1%) center / var(22px) var(22px),
-		var(#CCCCCC);
+  border-radius: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(4px);
 }
 
 .About-Text-Box h2 {
@@ -191,6 +246,7 @@ https://codepen.io/edmundojr/pen/xOYJGw
   font-weight: normal;
   color: #aa0200;
 }
+
 .About-Text-Box h2 span {
   color: #CCCCCC;
 }
@@ -208,15 +264,27 @@ https://codepen.io/edmundojr/pen/xOYJGw
   background-color: #242424;
 }
 
+/* ---------------------------------------------------------------
+                        Section Projets
+--------------------------------------------------------------- */
+
 .Projets {
-  padding: 200px 0px 200px 0px;
+  padding: 150px 0px 150px 0px;
   justify-content: center;
   align-items: center;
   display: flex;
   gap: 20px;
-  margin: 20px 0px;
   align-items: stretch;
   min-height: 360px;
+
+  /* Créer une background de points */
+	background:
+		linear-gradient(90deg, #0C0C0C calc(22px - .1em), transparent 1%) center / 22px 22px,
+		linear-gradient(#0C0C0C calc(22px - .1em), transparent 1%) center / 22px 22px,
+		#242424;
+
+  /* Mette un masque pour faire disparaitre le motif sur les cotées de la section */
+  mask-image: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(0,0,0,1) 15%, rgba(0,0,0,1) 85%, rgba(0,0,0,0) 100%);
 }
 
 .Cards {
@@ -255,21 +323,26 @@ https://codepen.io/edmundojr/pen/xOYJGw
   right: 5px;
 }
 
+/* -----------------
+       Slide
+----------------- */
+
 .slide {
   display: none; /* cache les slides pas active */
   position: relative;
   opacity: 0;
   justify-content: space-between;
+  backdrop-filter: blur(2px);
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  border-radius: 45px;
+  padding: 25px 15px 25px 15px;
+  width: 350px;
+  height: 450px;
 }
 
 .slide.active {
   display: block;
   opacity: 1;
-  width: 350px;
-  height: 450px;
-  border: 2px solid #CCCCCC;
-  border-radius: 7.5%;
-  padding: 25px 15px 25px 25px;
 }
 
 .slide li {
@@ -289,15 +362,29 @@ https://codepen.io/edmundojr/pen/xOYJGw
   color: #CCCCCC;
 }
 
+.slide img {
+  width: 250px;
+  height: 300px;
+  object-fit: contain;
+  margin: 10px auto;
+}
+
+/* -----------------
+    Description
+----------------- */
+
 .description {
   display: none;
   position: relative;
   opacity: 0;
   background-color: #242424;
-  width: 350px;
+  width: 400px;
   height: 450px;
-  border-radius: 7.5%;
-  padding: 25px 15px 25px 25px;
+  padding: 25px 15px 25px 30px;
+  border-radius: 45px;
+  border: 2px solid rgba(255, 255, 255, 0.06);
+  background-color: rgba(204, 204, 204, 0.021);
+  backdrop-filter: blur(2px);
 }
 
 .description.active {

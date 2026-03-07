@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+    <meta charset="UTF-8">
     <link rel="icon" href="logo.png">
     <link rel="stylesheet" href="style.css">
     <title>KOIexe</title>
@@ -33,6 +34,14 @@
             <button id="github" class="Presentation-Button"><i class="fi fi-brands-github"></i>Voir mon GitHub</button>
 
         </div>
+        <div class="voiture" id="nithawi">
+            <img src="nvision74-by-Nithawi.png" height="325px">
+            <div class="voiture-Text">
+                <span>Hyundai N Vision 74</span>
+                <h2 class="nithawi">by: Nithawi</h2>
+                <!-- Fait par Nithawi (il dessine bien) -->
+            </div>
+        </div>
     </div>
 
     <div class="Bandeau">
@@ -62,35 +71,62 @@
     </div>  
     <div class="Projets" id="projets">
 
+        <!-- Cards des projets, image et nom ici -->
         <ul class="Cards">
             <button class="Card-Btn" id="prev"><</button>
 
-            <li class="Slide active">
+            <li class="slide">
                 <h2>Biscotte</h2>
-                <img src="img_biscotte.png">
+                <img src="Blank.png">
+                <!-- Il faudra changer l'image, j'en ai pas pour le moment -->
             </li>
         
-            <li class="Slide">
+            <li class="slide active">
                 <h2>Homelab</h2>
                 <img src="img_homelab.png">
             </li>
 
-            <li class="Slide">
+            <li class="slide">
                 <h2>Site web</h2>
-                <img src="img_siteWeb.png">
+                <img src="img_site.png">
 
             </li>
 
             <button class="Card-Btn" id="next">></button>
         </ul>
 
+        <!-- Boite de description des projets -->
         <div class="Description-Box">
-            <p class="Description active">/!\ PLACEHOLDER /!\ Un assistant vocal personnalisé développé en Python, capable de répondre à des commandes vocales, d'effectuer des tâches automatisées et de fournir des informations en temps réel.</p>
-            <p class="Description">/!\ PLACEHOLDER /!\ Un homelab personnel configuré pour l'apprentissage et l'expérimentation avec diverses technologies, y compris la virtualisation, les conteneurs et les services réseau.</p>
-            <p class="Description">/!\ PLACEHOLDER /!\ Un site web personnel conçu pour présenter mes compétences, mes projets et mon parcours dans le domaine de l'informatique et de la programmation.</p>
+            <p class="description">
+                Asistant vocal développé en Python.<br>
+                Le projet est une interface vocale pour exécuter des commandes, récupérer des informations, ouvrir des programmes ou des sites, et répondre à des question avec l'IA Gemini<br><br>
+                Le projet utiliser une architecture semi modulaire (/modules) pour ajouter des fonctionnaliter simplement<br><br>
+                Biscotte est disponible en français et en anglais, tout les commentaires et messages de debug sont en anglais<br><br>
+                Une configuration est possible via le fichier config.py, avec notament l'activation ou non des messages de debug, du mode text ainsi que de l'IA
+            </p>
+
+            <p class="description active">
+                Homelab personnel basé sur Proxmox, utilisant des machines virtuelles (VM) et conteneurs LXC pour héberger et isoler plusieurs services auto-hébergés<br><br>
+                Déploiement et administration de services tels que Nextcloud, Ollama, OpenMediaVault, Pi-hole, Homarr<br><br>
+                Mise en place d’un accès distant sécurisé via Cloudflare Tunnel et WireGuard<br><br>
+                Gestion du réseau, du stockage et du monitoring, avec résolution d’incidents système (bootloader, services, réseau)<br><br>
+                Utilisé comme environnement d’apprentissage pour l’administration système, la virtualisation et le self-hosting
+            </p> 
+
+            <p class="description">
+                Développement d’un site portfolio pour présenter mes projets et mon profil.<br><br>
+                Réalisation de la structure en HTML, du style en CSS et de quelque interaction avec JavaScript<br><br>
+                Mise en place d’un carrousel de projets et d’une page de présentation<br><br>
+                Ce projet m’a permis d’améliorer mes bases en développement web et en mise en page<br><br>
+                J’ai également appris à organiser et présenter clairement mes projets
+            </p>
         </div>
     </div>
-      
+
+    <footer>
+
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
