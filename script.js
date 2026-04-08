@@ -1,39 +1,63 @@
+const DEBUG = false;
 
-// Boutton GitHub dans la section de présentation
+// Thème
+document.body.dataset.theme = "dark";
 
-document.getElementById('github').addEventListener('click', function() {
-    window.open('https://github.com/KOIexe86', '_blank');
-});
+function toggleTheme() {
+  var theme = document.body.dataset.theme;
 
-// Boutton "By: Nithawi" comme crédit de la voiture
-document.getElementById('nithawi').addEventListener('click', function() {
-    window.open('https://www.instagram.com/nithawi_draw?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==', '_blank');
-});
+  if (theme === "dark") {
+    document.body.dataset.theme = "light";
+    if (DEBUG) {
+      console.log("Theme: " + document.body.dataset.theme);
+    }
+
+  } else {
+    document.body.dataset.theme = "dark";
+    if (DEBUG) {
+      console.log("Theme: " + document.body.dataset.theme);
+    }
+
+  }
+}
 
 
-// Cards
 
-const buttonts = document.querySelectorAll(".Card-Btn");
-const slides = document.querySelectorAll(".slide");
-const descriptions = document.querySelectorAll(".description");
+// Header
 
-buttonts.forEach((button) => {
-    button.addEventListener("click", (e) => {
-        const calcNextSlide = e.target.id === "next" ? 1 : -1;
-        const slideActuel = document.querySelector(".active");
-        const descriptionActuel = document.querySelector(".description.active");
+const header = document.getElementById("header");
+const title = document.getElementById("title");
+const navText = document.getElementById("nav-text");
 
-        newIndex = calcNextSlide + [...slides].indexOf(slideActuel);
-        
-        
-        if (newIndex < 0) 
-            newIndex = [...slides].length - 1;
-        if (newIndex >= [...slides].length) 
-            newIndex = 0;
+window.onscroll = function() {scrollFunction()};
 
-        slides [newIndex].classList.add("active");
-        slideActuel.classList.remove("active");
-        descriptions [newIndex].classList.add("active");
-        descriptionActuel.classList.remove("active");
-    })
-})
+function scrollFunction() {
+  if (document.documentElement.scrollTop >= 81) {
+    if (DEBUG) {
+      console.log("Scroll position: " + document.documentElement.scrollTop);
+    }
+
+    // Style pour le header quand on est en haut de la page
+    header.className = "Header-Bottom";
+
+    // Style pour le titre quand on est en haut de la page
+    title.className = "title-bottom";
+
+    // Style pour les liens de navigation quand on est en haut de la page
+    navText.className = "nav-text-bottom";
+
+  } else {
+    if (DEBUG) {
+      console.log(document.documentElement.scrollTop);
+    }
+
+    // Style pour le header quand on est en haut de la page
+    header.className = "Header-Top";
+
+    // Style pour le titre quand on est en haut de la page
+    title.className = "title-top";
+
+    // Style pour les liens de navigation quand on est en haut de la page
+    navText.className = "nav-text-top";
+  }
+}
