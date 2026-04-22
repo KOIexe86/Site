@@ -143,12 +143,24 @@ header {
   margin-right: auto;
 }
 
+/* Version PC */
 .Header-Top {
   width: 100%;
   height: 80px;
   border-radius: 0px;
   background-color: var(--Background);
   backdrop-filter: none;
+}
+
+/* Version mobile */
+@media (max-width: 1030px) {
+  .Header-Top {
+    width: fit-content;
+    height: 46px;
+    border-radius: 0px 0px 20px 20px;
+    background-color: rgba(95, 95, 95, 0.05);
+    backdrop-filter: blur(8px);
+  }
 }
 
 .Header-Bottom {
@@ -168,6 +180,7 @@ nav {
   width: 100%;
 }
 
+/* Version PC */
 nav .title-top {
   align-items: center;
   display: flex;
@@ -180,10 +193,18 @@ nav .title-top h1 {
   font-size: 2.3rem;
 }
 
+/* Version Mobile */
+@media (max-width: 1030px) {
+  nav .title-top {
+    display: none;
+  }
+}
+
 nav .title-bottom {
   display: none;
 }
 
+/* Version PC */
 nav .nav-text-top {
   display: flex;
   gap: 35px;
@@ -209,6 +230,36 @@ nav .nav-text-top {
 
 .nav-text-top a:hover::after {
   transform: scaleX(1);
+}
+
+/* Version Mobile */
+@media (max-width: 1030px) {
+  nav .nav-text-top {
+    display: flex;
+    gap: 35px;
+    margin-right: 15px;
+    margin-left: 15px;
+  }
+
+  .nav-text-top i {
+    font-size: 1.5rem;
+    display: block;
+  }
+
+  .nav-text-top a {
+    font-size: 0rem;
+    position: relative;
+    padding: 5px;
+  }
+
+  .nav-text-bottom a {
+    font-size: 0rem;
+  }
+
+  .nav-text-bottom i {
+    font-size: 1.5rem;
+    display: block;
+  }
 }
 
 .nav-text-bottom {
@@ -270,8 +321,7 @@ nav .nav-text-top {
 .Presentation p {
   display: flex;
   font-size: 1rem;
-  line-height: 0.1rem;
-  margin-top: 3px;
+  margin-top: 0px;
   flex-wrap: wrap;
 }
 
@@ -286,6 +336,18 @@ nav .nav-text-top {
   z-index: 1;
   margin: auto 0px auto 0px;
   transition: 0.5s cubic-bezier(0.00,0.00,0.40,1.00);
+}
+
+/* Version Mobile */
+@media (max-width: 1030px) {
+  .Presentation {
+    padding: 40px 0px 40px 0px;
+    justify-content: center;
+  }
+
+  .Presentation-Text-Box {
+    width: 75vw;
+  }
 }
 
 .Presentation-Text-Box:hover {
@@ -337,6 +399,13 @@ nav .nav-text-top {
   border: 1px solid var(--Border-Color);
   margin: 20px 0px 20px 0px;
   transition: 0.5s cubic-bezier(0.00,0.00,0.40,1.00);
+}
+
+/* Version Mobile */
+@media (max-width: 1030px) {
+  .Presentation .voiture {
+    width: 75vw;
+  }
 }
 
 .voiture:hover {
@@ -422,6 +491,13 @@ nav .nav-text-top {
   .About-Infos-Box { grid-area: 2 / 1 / 3 / 2; }
   .About-Description-Box { grid-area: 3 / 1 / 4 / 3; }
   .About-Stage-Box { grid-area: 1 / 2 / 3 / 3; }
+}
+
+@media (max-width: 930px) {
+  .About-Photo-Box { grid-area: 1 / 1 / 2 / 2; }
+  .About-Infos-Box { grid-area: 2 / 1 / 3 / 2; }
+  .About-Description-Box { grid-area: 5 / 1 / 7 / 2; }
+  .About-Stage-Box { grid-area: 3 / 1 / 5 / 2; }
 }
 
 .About-Box-Container p {
@@ -547,7 +623,6 @@ nav .nav-text-top {
 .PCards {
   display: flex;
   justify-content: center;
-  padding: 0px 60px 0px 60px;
   flex-wrap: wrap;
   gap: 20px;
 }
@@ -631,6 +706,7 @@ nav .nav-text-top {
   background-image: radial-gradient(circle at bottom, var(--Primary) 0%, var(--Background) 60%);
 }
 
+/* Version PC */
 .Form-Container {
   margin-left: auto;
   margin-right: auto;
@@ -645,6 +721,13 @@ nav .nav-text-top {
   backdrop-filter: blur(8px);
   border: 2px solid var(--Border-Color);
   border-radius: 10px;
+}
+
+/* Version Mobile */
+@media (max-width: 860px) {
+  .Form-Container {
+    width: 75vw;
+  }
 }
 
 form {
@@ -734,6 +817,7 @@ footer {
   background-image: radial-gradient(circle at bottom, var(--Background) 0%, var(--Primary) 60%);
 }
 
+/* Version PC */
 .Footer-Title {
   font-size: 5rem;
   text-align: center;
@@ -745,12 +829,25 @@ footer {
 }
 
 .Footer-Container {
-  padding: 20px 350px 0px 350px;
+  padding: 20px 20vw 0px 20vw;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: 1fr;
   grid-column-gap: 0px;
   grid-row-gap: 0px;
+}
+
+/* Version Mobile */
+@media (max-width: 1030px) {
+  .Footer-Title {
+    font-size: 3rem;
+  }
+
+  .Footer-Container {
+    padding: 20px 20px 20px 20px;
+    grid-row-gap: 25px;
+  }
+  
 }
 
 .Footer-Droite { grid-area: 1 / 2 / 2 / 3; }
