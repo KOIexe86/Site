@@ -21,7 +21,7 @@
                 <a href="#a-propos"><i class="fi fi-rr-user"></i> A propos</a>
                 <a href="#projets"><i class="fi fi-rr-briefcase"></i> Projets</a>
                 <a href="#contact"><i class="fi fi-rr-attribution-pencil"></i> Contact</a>
-                <a id="ThemeToggle" href="#" onclick="toggleTheme()"><i class="fi fi-rr-night-day"></i> Thème</a>
+                <a id="ThemeToggle" onclick="toggleTheme()"><i class="fi fi-rr-night-day"></i> Thème</a>
             </div>
         </nav>
     </header>
@@ -68,19 +68,19 @@
 
                 <p>Stage de Terminale</p>
                 <ul>
-                    <li>Chez dans l'aéronotique</li>
+                    <li>Dans l'aéronotique</li>
                     <li>Création d'outils internes pour de la gestion de parc (PXE linux, serveur FOG), découvete de la gestion de projets</li>
                 </ul>
 
                 <p>Stage de 1ère</p>
                 <ul>
-                    <li>Chez dans l'aéronotique</li>
+                    <li>Dans l'aéronotique</li>
                     <li>Découvrte de la gestion de parc informatique et de leur logiciels. Maintenance de systèmes informatiques et des postes de travail</li>
                 </ul>
 
-                <p>Stage dans l'électricité</p>
+                <p>Stage de 2nde</p>
                 <ul>
-                    <li>Chez SNEE</li>
+                    <li>Dans l'éléctricité</li>
                     <li>Découverte du monde de l'éléctricité, mise en pratique sur des chantiers</li>
                 </ul>
             </div>
@@ -117,44 +117,63 @@
         <div class="PCards-Holder">
             <!-- Cards des projets, image et nom ici -->
             <div class="PCards">
-                <div class="PCard" id="biscotte">
-                    <div class="PCardTitle">
-                        <img src="Blank.png">
-                        <h2>Biscotte</h2>
-                    </div>
-                    <!-- Il faudra changer l'image, j'en ai pas pour le moment -->
-                    <p class="DescriptionAfficher" id="biscotte">Assistant vocal développé en Python avec de nombreuse fonctionalités nommé Biscotte</p>
-                    <div class="Pill_Holder">
-                        <div class="Pill">PYTHON</div>
-                    </div>
-                </div>
-            
-                <div class="PCard" id="homelab">
-                    <div class="PCardTitle">
-                        <img src="img_homelab.png">
-                        <h2>Homelab</h2>
-                    </div>
-                    <p class="DescriptionAfficher" id="homelab">Serveur personnel basé sur Proxmox pour héberger plusieurs services</p>
-                    <div class="Pill_Holder">
-                        <div class="Pill">Linux</div>
-                        <div class="Pill">Cloudflare</div>
-                        <div class="Pill">VM</div>
-                        <div class="Pill">Container LXC</div>
-                    </div>
-                </div>
+                <a href="https://github.com/KOIexe86/Biscotte_Assistant" target="_blank">
+                    <div class="PCard" id="biscotte">
+                        <div class="PCardTitle">
+                            <img src="Blank.png">
+                            <h2>Biscotte</h2>
+                        </div>
+                        <!-- Il faudra changer l'image, j'en ai pas pour le moment -->
+                        <p class="DescriptionAfficher" id="biscotte">Assistant vocal développé en Python avec de nombreuse fonctionalités nommé Biscotte</p>
+                        <div class="PCard-bottom">
+                            <div class="Pill_Holder">
+                                <div class="Pill">PYTHON</div>
+                            </div>
 
-                <div class="PCard" id="site">
-                    <div class="PCardTitle">
-                        <img src="img_site.png">
-                        <h2>Portfolio</h2>
+                            <div class="PCard-arrow"><i class="fi fi-rr-arrow-up-right"></i></div>
+                        </div>
                     </div>
-                    <p class="DescriptionAfficher" id="site">Développement d’un site portfolio pour présenter mes projets, et mon profil</p>
-                    <div class="Pill_Holder">
-                        <div class="Pill">HMTL</div>
-                        <div class="Pill">CSS</div>
-                        <div class="Pill">JS</div>
+                </a>
+            
+                <a href="https://homelab.koiexe.fr" target="_blank">
+                    <div class="PCard" id="homelab">
+                        <div class="PCardTitle">
+                            <img src="img_homelab.png">
+                            <h2>Homelab</h2>
+                        </div>
+                        <p class="DescriptionAfficher" id="homelab">Serveur personnel basé sur Proxmox pour héberger plusieurs services</p>
+                        <div class="PCard-bottom">
+                            <div class="Pill_Holder">
+                                <div class="Pill">Linux</div>
+                                <div class="Pill">Cloudflare</div>
+                                <div class="Pill">VM</div>
+                                <div class="Pill">Container LXC</div>
+                            </div>
+
+                            <div class="PCard-arrow"><i class="fi fi-rr-arrow-up-right"></i></div>
+                        </div>
                     </div>
-                </div>
+                </a>
+                
+                <a href="https://github.com/KOIexe86/Site" target="_blank">
+                    <div class="PCard" id="site">
+                        <div class="PCardTitle">
+                            <img src="img_site.png">
+                            <h2>Portfolio</h2>
+                        </div>
+                        <p class="DescriptionAfficher" id="site">Développement d’un site portfolio pour présenter mes projets, et mon profil</p>
+                        
+                        <div class="PCard-bottom">
+                            <div class="Pill_Holder">
+                                <div class="Pill">HMTL</div>
+                                <div class="Pill">CSS</div>
+                                <div class="Pill">JS</div>
+                            </div>
+
+                            <div class="PCard-arrow"><i class="fi fi-rr-arrow-up-right"></i></div>
+                        </div>
+                    </div>
+                </a>
             </div>
         </div>
     </div>

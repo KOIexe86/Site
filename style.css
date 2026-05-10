@@ -639,6 +639,7 @@ nav .nav-text-top {
   border-radius: 45px;
   padding: 20px;
   width: 350px;
+  cursor: pointer;
 
   transition: 0.5s cubic-bezier(0.00,0.00,0.40,1.00);
 }
@@ -666,6 +667,12 @@ nav .nav-text-top {
 
 .PCardTitle {
   display: flex;
+}
+
+.PCard-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
 }
 
 /* -----------------
